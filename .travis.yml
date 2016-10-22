@@ -21,7 +21,7 @@ branches:
 matrix:
   fast_finish: true
   include:
-    - rvm: 2.2.0
+    - rvm: 2.2.2
       gemfile: test/gemfiles/Gemfile.rails.master
   allow_failures:
     - gemfile: test/gemfiles/Gemfile.rails.master
