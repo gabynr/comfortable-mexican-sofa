@@ -17,6 +17,7 @@ gemfile:
 branches:
   only:
     - master
+    - "test-travis-ci"
 matrix:
   fast_finish: true
   include:
