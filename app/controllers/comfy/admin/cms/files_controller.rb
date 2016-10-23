@@ -109,7 +109,7 @@ protected
 
   def file_params
     file = params[:file]
-    unless file.is_a?(Hash) || file.is_a?(ActionController::Parameters)
+    unless file.is_a?(Hash) || file.respond_to?(:to_unsafe_hash)
       params[:file] = { }
       params[:file][:file] = file
     end
