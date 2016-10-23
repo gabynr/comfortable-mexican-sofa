@@ -127,11 +127,11 @@ class CmsPageTest < ActiveSupport::TestCase
     assert_equal '/child-page/test-page-1/test-page-4', page_4.full_path
 
     page.update_attributes!(:slug => 'updated-page')
-    page.reload
     assert_equal '/updated-page', page.full_path
-    page_1.reload; page_2.reload; page_3.reload; page_4.reload
+    page.reload; page_1.reload; page_2.reload; page_3.reload; page_4.reload
     assert_equal '/updated-page/test-page-1', page_1.full_path
     assert_equal '/updated-page/test-page-2', page_2.full_path
+    page.reload; page_1.reload; page_2.reload; page_3.reload; page_4.reload
     assert_equal '/updated-page/test-page-2/test-page-3', page_3.full_path
     assert_equal '/updated-page/test-page-1/test-page-4', page_4.full_path
 
