@@ -13,8 +13,8 @@ gemfile:
   - test/gemfiles/Gemfile.rails.5.1
 branches:
   only:
-    #  - master
-    - rails-5.1-support
+    - master
+    - happy-production
 matrix:
   fast_finish: true
   include:
