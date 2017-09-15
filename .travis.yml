@@ -18,6 +18,7 @@ gemfile:
 branches:
   only:
     - master
+    - happy-production
 matrix:
   fast_finish: true
   include:
