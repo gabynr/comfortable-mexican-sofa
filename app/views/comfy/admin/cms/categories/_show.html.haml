@@ -1,6 +1,8 @@
 - category ||= show
 - read ||= false
-- categories = [params[:category]].flatten.compact
+- cat = params.fetch(:category,{})
+- cat.respond_to?(:permit!) ? cat.permit! : cat
+- categories = [cat].flatten.compact
 - active = categories.flatten.member?(category.label)
 
 .category{:class => (read && active ? 'active' : nil), :id => dom_id(category)}
