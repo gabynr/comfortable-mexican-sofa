@@ -14,6 +14,7 @@ class Comfy::Cms::Page < ActiveRecord::Base
   belongs_to :layout
   belongs_to :target_page,
     :class_name => 'Comfy::Cms::Page'
+    :optional   => true
 
   # -- Callbacks ------------------------------------------------------------
   before_validation :assigns_label,
